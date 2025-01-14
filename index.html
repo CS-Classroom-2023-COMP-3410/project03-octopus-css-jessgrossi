@@ -4,6 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <title>The Fascinating World of Octopuses</title>
+    <style>
+        /* Set the background color for the entire webpage and apply margins */
+        body {
+            background-color: paleTurquoise;
+            margin: 0; /* Remove body margins */
+            padding: 25px; /* Add padding to maintain consistent 25px margins */
+        }
+
+        /* Style the header section */
+        #header {
+            width: calc(100% - 50px); /* Adjust for 25px margins on both sides */
+            background: linear-gradient(to right, royalblue, deepskyblue);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        #header p {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        /* Main content box styling */
+        #main-content {
+            width: calc(100% - 50px); /* Adjust for 25px margins */
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: navy; /* Navy text for paragraphs */
+            margin-top: 10px; /* Add 10px of space between header and main content */
+        }
+
+        #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6 {
+            color: steelblue; /* Steelblue color for headers */
+        }
+
+        /* Octopus quiz section styling */
+        #quiz-section {
+            width: calc(100% - 50px); /* Adjust for 25px margins */
+            background: cyan;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto; /* Center the quiz box */
+            color: navy; /* Navy text */
+            box-sizing: border-box;
+        }
+
+        #quiz-section h2 {
+            color: steelblue; /* Match header colors */
+            text-align: left; /* Left-align title */
+        }
+
+        #quiz-section img {
+            float: left; /* Keep image left-aligned */
+            margin-right: 10px; /* Add space between image and text */
+        }
+
+        #quiz-section form {
+            text-align: right; /* Right-align form elements */
+        }
+
+        #quiz-section label {
+            display: block;
+            text-align: right; /* Right-align labels */
+            margin: 10px 0; /* Add space between elements */
+        }
+
+        #quiz-section input {
+            display: block;
+            margin: 10px 0 10px auto; /* Align inputs to the right */
+        }
+
+        #quiz-section input[type="submit"] {
+            margin-top: 20px; /* Add space above submit button */
+        }
+
+        /* Table styling */
+        #species-table {
+            width: calc(100% - 50px); /* Adjust for 25px margins */
+            margin: 20px 0; /* Left-align the table */
+            border-collapse: collapse;
+            box-sizing: border-box;
+        }
+
+        #species-table th, #species-table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #species-table th {
+            background-color: grey;
+            color: white;
+        }
+
+        #species-table td {
+            color: black;
+        }
+
+        #species-table tr:nth-child(2) {
+            background-color: cyan;
+        }
+
+        #species-table tr:nth-child(3) {
+            background-color: white;
+        }
+
+        #species-title {
+            color: steelblue;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styling */
+        #footer {
+            width: calc(100% - 50px); /* Adjust for 25px margins on both sides */
+            background: royalblue;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 10px; /* Add spacing above footer */
+            text-align: left; /* left align footer text */
+        }
+    </style>
 </head>
 
 <body>
@@ -58,19 +189,18 @@
 
         <!-- Fun Experiment: Octopus Quiz -->
         <div id="quiz-section">
-
+            <h2>Octopus Quiz</h2>
             <!-- Image -->
             <img src="octopus-image.png" alt="Image of an octopus" width="100">
 
-            <h2>Octopus Quiz</h2>
             <form action="/submit-quiz" method="POST">
                 <!-- Question 1 -->
                 <label for="question1">How many hearts does an octopus have?</label>
-                <input type="text" id="question1" name="question1"><br>
+                <input type="text" id="question1" name="question1">
 
                 <!-- Question 2 -->
                 <label for="question2">Can octopuses change color? (Yes/No)</label>
-                <input type="text" id="question2" name="question2"><br>
+                <input type="text" id="question2" name="question2">
 
                 <input type="submit" value="Submit Quiz">
             </form>
@@ -78,10 +208,10 @@
 
     </div> <!-- End of main-content -->
 
-    <!-- Table -->
-    <div id="species-table">
-        <h2>Common Octopus Species</h2>
-        <table border="1">
+    <!-- Table Section -->
+    <div id="table-section">
+        <h2 id="species-title">Common Octopus Species</h2>
+        <table id="species-table">
             <tr>
                 <th>Species</th>
                 <th>Location</th>
